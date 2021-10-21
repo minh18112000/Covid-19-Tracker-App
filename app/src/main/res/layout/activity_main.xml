@@ -1,18 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewStyle"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TitleStyle"
+                android:text="World Wide Record" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CaseStyle"
+                        android:text="Cases" />
+
+                    <TextView
+                        android:id="@+id/TVWorldCases"
+                        style="@style/NumberOfCaseStyle"
+                        android:text="Number of cases"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CaseStyle"
+                        android:text="Recovered" />
+
+                    <TextView
+                        android:id="@+id/TVWorldRecovered"
+                        style="@style/NumberOfCaseStyle"
+                        android:text="Number of recovered"
+                        android:textColor="@color/green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CaseStyle"
+                        android:text="Deaths" />
+
+                    <TextView
+                        android:id="@+id/TVWorldDeaths"
+                        style="@style/NumberOfCaseStyle"
+                        android:text="Number of deaths"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewStyle"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TitleStyle"
+                android:text="Vietnam Record" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CaseStyle"
+                        android:text="Cases" />
+
+                    <TextView
+                        android:id="@+id/TVVietnamCases"
+                        style="@style/NumberOfCaseStyle"
+                        android:text="Number of cases"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CaseStyle"
+                        android:text="Recovered" />
+
+                    <TextView
+                        android:id="@+id/TVVietnamRecovered"
+                        style="@style/NumberOfCaseStyle"
+                        android:text="Number of recovered"
+                        android:textColor="@color/green" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/CaseStyle"
+                        android:text="Deaths" />
+
+                    <TextView
+                        android:id="@+id/TVVietnamDeaths"
+                        style="@style/NumberOfCaseStyle"
+                        android:text="Number of deaths"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVProvinces"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
