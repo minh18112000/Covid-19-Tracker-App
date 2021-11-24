@@ -13,9 +13,9 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/TVProvinceName"
+            android:id="@+id/TVCountryName"
             style="@style/TitleStyle"
-            android:text="Province Name" />
+            android:text="Country Name" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                     android:text="Cases" />
 
                 <TextView
-                    android:id="@+id/TVProvinceCases"
+                    android:id="@+id/TVCountryCases"
                     style="@style/NumberOfCaseStyle"
                     android:text="Number of cases"
                     android:textColor="@color/blue" />
@@ -48,13 +48,13 @@
 
                 <TextView
                     style="@style/CaseStyle"
-                    android:text="Today" />
+                    android:text="Recovered" />
 
                 <TextView
-                    android:id="@+id/TVProvinceCasesToday"
+                    android:id="@+id/TVCountryRecovered"
                     style="@style/NumberOfCaseStyle"
-                    android:text="Number of cases today"
-                    android:textColor="@color/red" />
+                    android:text="Number of recovered"
+                    android:textColor="@color/green" />
             </LinearLayout>
 
             <LinearLayout
@@ -68,7 +68,7 @@
                     android:text="Deaths" />
 
                 <TextView
-                    android:id="@+id/TVProvinceDeaths"
+                    android:id="@+id/TVCountryDeaths"
                     style="@style/NumberOfCaseStyle"
                     android:text="Number of deaths"
                     android:textColor="@color/red" />
